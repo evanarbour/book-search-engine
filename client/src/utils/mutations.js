@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from '@apollo/react-hooks';
 
 export const LOGIN_USER = gql 
 `
@@ -34,7 +34,7 @@ export const SAVE_BOOK = gql
             username
             email
             bookCount
-            bookInput {
+            savedBooks {
                 bookId
                 authors
                 description
@@ -54,7 +54,8 @@ export const REMOVE_BOOK = gql
             username
             email
             bookCount
-            bookInput {
+            savedBooks{
+                # _id
                 bookId
                 authors
                 description
